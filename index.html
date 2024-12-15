@@ -8,104 +8,64 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', monospace;
+            background-color: #1e1e1e;
+            color: #c5c5c5;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
-            overflow: hidden;
         }
 
         h1 {
-            font-size: 3rem;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 2s ease-in-out infinite alternate;
+            font-size: 2.5rem;
+            color: #00ff88;
+            margin-bottom: 20px;
+            animation: typing 2s steps(30, end), blink 0.5s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #00ff88;
+            width: 18ch;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 18ch; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
         }
 
         p {
-            font-size: 1.5rem;
-            color: white;
+            font-size: 1.2rem;
+            color: #c5c5c5;
             margin-top: 20px;
-            text-align: center;
-            animation: slideUp 3s ease-in-out infinite alternate;
         }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            0% {
-                transform: translateY(10px);
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(-10px);
-                opacity: 1;
-            }
-        }
-
-        .bouncing-ball {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            border-radius: 50%;
-            bottom: 10%;
-            animation: bounce 1.5s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-100px);
-            }
-        }
-
-        .rotating-circle {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border: 4px solid white;
-            border-top-color: transparent;
-            border-radius: 50%;
-            animation: rotate 3s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+        .terminal {
+            width: 80%;
+            max-width: 800px;
+            background: #121212;
+            border: 1px solid #00ff88;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
         }
 
         footer {
-            position: absolute;
-            bottom: 20px;
-            text-align: center;
-            width: 100%;
-            color: white;
-            font-size: 1rem;
+            margin-top: 20px;
+            color: #888;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <div class="rotating-circle"></div>
-    <div class="bouncing-ball"></div>
-    <h1>Aan deze website wordt nog gewerkt!</h1>
-    <p>Groetjes, Lucas</p>
+    <div class="terminal">
+        <h1>Aan deze website wordt nog gewerkt!</h1>
+        <p>Groetjes, Lucas</p>
+    </div>
     <footer>&copy; 2024 Lucas</footer>
 </body>
 </html>
